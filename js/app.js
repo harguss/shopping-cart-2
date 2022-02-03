@@ -8,6 +8,10 @@ const Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   console.log(product, quantity)
+    //create a variable = then call the new CartItem(with arguments);
+    let itemVariable = new CartItem(product, quantity);
+//then push variable to the this.items array in the above function.
+    this.items.push(itemVariable);
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
 };
 

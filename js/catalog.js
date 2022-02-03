@@ -50,7 +50,7 @@ function addSelectedItemToCart() {
   let picksQuant = document.getElementById('quantity').value;
   console.log('picksquant', picksQuant);
   Cart.prototype.addItem(picks, picksQuant);
-  console.log()
+
   // let cartItem = pickQuant.pick
   // let cart = cart.cartItem.push
   // TODO: suss out the item picked from the select list
