@@ -33,7 +33,7 @@ cart.saveToLocalStorage();
 cart.updateCounter();
 updateCartPreview(cart.items[cart.items.length - 1]);
 event.target.reset();
-}
+
 
   // Do all the things ...
   addSelectedItemToCart();
