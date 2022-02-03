@@ -28,6 +28,14 @@ function handleSubmit(event) {
   // Prevent the page from reloading
   event.preventDefault();
 
+addSelectedItemToCart();
+cart.saveToLocalStorage();
+cart.updateCounter();
+updateCartPreview(cart.items[cart.items.length - 1]);
+event.target.reset();
+
+
+  // Do all the things ...
   addSelectedItemToCart();
   cart.saveToLocalStorage();
   cart.updateCounter();

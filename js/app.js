@@ -13,6 +13,16 @@ Cart.prototype.addItem = function(product, quantity) {
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  let saveToLocalStorage = localStorage.getItem('items');
+  let savedProductString = localStorage.getItem('items');
+if(savedProductString){
+  console.log('this is the objects in string form ', savedItemString);
+  localStorage.setItem('savedProducts', JSON.stringify(allItems));
+  }
+
+  //parse string into objects
+  let arrayOfNotProductObject = JSON.parse(savedProductString);
+  console.log('if condition what is our type ',arrayOfNotProductObject);
 };
 
 Cart.prototype.removeItem = function(item) {
@@ -57,3 +67,5 @@ function generateCatalog() {
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
+
+
