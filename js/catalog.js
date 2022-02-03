@@ -33,13 +33,6 @@ function handleSubmit(event) {
   cart.updateCounter();
   updateCartPreview(cart.items[cart.items.length - 1]);
   event.target.reset();
-
-  // Do all the things ...
-  addSelectedItemToCart();
-  cart.saveToLocalStorage();
-  updateCounter();
-  updateCartPreview();
-
 }
 
 // TODO: Add the selected item and quantity to the cart
@@ -50,7 +43,10 @@ function addSelectedItemToCart() {
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+Cart.prototype.updateCounter = function() {
+document.getElementById('itemCount').textContent = '(' + this.items.length + ')';
+console.log('itemCount', this.items.length);
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
